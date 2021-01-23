@@ -1,0 +1,48 @@
+@import "../../../../../assets/scss/variable.scss";
+
+.filter-wrapper{
+    background-color: $color-white;
+    padding: 5px;
+    margin-bottom: 10px;
+    span{
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .filter{
+        text-align: center;
+        margin: 0px 20px;
+        .filter-heading{
+            margin: 0px 30px;
+            border-bottom: 1px solid $border-color;    
+        }
+        .filter-container{
+            padding: 10px 0px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            div{
+                width: 49%;
+                padding: 5px 0px;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .filter-wrapper{
+    .filter{
+        margin: 0px 10px;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .filter-wrapper{
+        .filter{
+            .filter-heading{
+                margin: 0px 80px;
+             }
+            }
+        }
+}

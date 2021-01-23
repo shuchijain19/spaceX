@@ -1,0 +1,26 @@
+<div class="launch-wrapper" *ngIf="!isLoading">
+    <div class="card-container" *ngFor="let launch of launchList">
+        <mat-card class="program-card">
+        
+            <div class="img-container">
+                <img mat-card-image [src]="launch.links.mission_patch_small"
+                    alt="space program">
+            </div>
+            <mat-card-content>
+                <div class="title"> <span>{{launch.mission_name}}&nbsp;#{{launch.flight_number}}</span></div>
+                <div><span>Mission Ids:</span>
+                    <ul>
+                        <li *ngFor="let id of launch.mission_id">&nbsp;{{id}}</li>
+                    </ul>
+                </div>
+                <div><span>Launch Year:</span>&nbsp;{{launch.launch_year}}</div>
+                <div><span>Successful Launch:</span>&nbsp;{{launch.launch_success}}</div>
+                <div><span>Successful Landing:</span>&nbsp;{{launch.launch_landing}}</div>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div *ngIf="launchList.length==0">No space program launched</div>
+
+</div>
+<div *ngIf="isLoading" class="loader"><mat-spinner></mat-spinner></div>

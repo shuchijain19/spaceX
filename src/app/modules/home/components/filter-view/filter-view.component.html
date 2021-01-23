@@ -1,0 +1,27 @@
+<div class="filter-wrapper">
+    <span>Filters</span>
+    <div class="filter">
+        <div class="filter-heading">Launch Year</div>
+        <div class="filter-container">
+            <div *ngFor="let year of filterYears"> 
+                <filter-btn [title]="year" [filterSelected]=" year === selectedYear" (filterClick)="applyYearFilter(year)"></filter-btn>
+             </div>
+        </div>
+    </div>
+    <div class="filter">
+        <div class="filter-heading">Successful Launch</div>
+        <div class="filter-container">
+            <div *ngFor="let status of launchStatus"> 
+                <filter-btn [title]="status.displayValue" [filterSelected]="status.id === launchSelected" (filterClick)="applyStatusFilter(status.id,'launch')"></filter-btn>
+            </div>
+        </div>
+    </div>
+    <div class="filter">
+        <div class="filter-heading">Successful Landing</div>
+        <div class="filter-container">
+            <div *ngFor="let status of landingStatus">
+                <filter-btn [title]="status.displayValue" [filterSelected]="status.id === landSelected" (filterClick)="applyStatusFilter(status.id,'land')"></filter-btn>
+             </div>
+        </div>
+    </div>
+</div>

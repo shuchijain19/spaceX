@@ -1,0 +1,59 @@
+@import "../../../../../assets/scss/variable.scss";
+
+.launch-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+    .card-container{
+        width: 25%;
+        margin-bottom: 15px;
+        padding: 0px 15px;
+        .program-card{
+            height: 100%;
+            .img-container{
+                padding: 16px;
+                padding-bottom: 0px;
+                background-color: $background-color;
+                img{
+                    margin-bottom: 0px;
+                }
+            }
+            .mat-card-content{
+                margin-top: 10px;
+                margin-bottom: 0px;
+                .title{
+                    font-weight: 600;
+                    color: $color-darkblue;
+                    margin-bottom: 10px;
+                }
+                div{
+                    span:first-child{
+                        font-weight: 600;   
+                    }
+                    ul{
+                        margin-bottom: .2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+.loader{
+    .mat-spinner{
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .launch-wrapper{
+    .card-container{
+        width: 47%;
+    }}
+}
+@media (max-width: 700px) {
+    .launch-wrapper{
+    .card-container{
+        width: 100%;
+    }}
+}

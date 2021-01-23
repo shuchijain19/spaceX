@@ -1,0 +1,19 @@
+@import "../../../../../assets/scss/variable.scss";
+
+.container-fluid{
+    background-color: $background-color;
+    .header{
+        font-weight: 600;
+        font-size: 32px;
+        padding: 5px 0px;
+        line-height: normal;
+    }
+    .footer{
+        text-align: center;
+        padding: 5px 0px;
+        span:first-child{
+            font-weight: 600;
+        }
+    }
+
+}

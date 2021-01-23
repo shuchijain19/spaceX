@@ -1,0 +1,12 @@
+@import "../../../../assets/scss/variable.scss";
+
+.filter-btn{
+    background-color: $color-lightgreen;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+.filter-btn:hover , .filter-selected{
+    background-color: $color-darkgreen;
+    outline: none;
+}
