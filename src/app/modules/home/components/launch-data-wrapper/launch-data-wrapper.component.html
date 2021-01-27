@@ -1,5 +1,5 @@
 <div class="launch-wrapper" *ngIf="!isLoading">
-    <div class="card-container" *ngFor="let launch of launchList">
+    <div class="card-container" *ngFor="let launch of launchList | appFilter: landSucessFilter">
         <mat-card class="program-card">
         
             <div class="img-container">
@@ -15,7 +15,7 @@
                 </div>
                 <div><span>Launch Year:</span>&nbsp;{{launch.launch_year}}</div>
                 <div><span>Successful Launch:</span>&nbsp;{{launch.launch_success}}</div>
-                <div><span>Successful Landing:</span>&nbsp;{{launch.launch_landing}}</div>
+                <div><span>Successful Landing:</span>&nbsp;{{launch.land_success}}</div>
 
             </mat-card-content>
         </mat-card>

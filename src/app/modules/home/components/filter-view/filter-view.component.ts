@@ -23,14 +23,15 @@ export class FilterViewComponent implements OnInit {
   }
 
   applyYearFilter(year) {
-    this.spaceProgramService.launchYear = year;
+    this.spaceProgramService.launchYear =  (year===this.selectedYear)?'':year;
   }
 
   applyStatusFilter(val, type) {
+   
     switch (type) {
-      case 'launch': this.spaceProgramService.launchStatus = val;
+      case 'launch': this.spaceProgramService.launchStatus = (val===this.launchSelected)?'':val;
         break;
-      case 'land': this.spaceProgramService.landStatus = val;
+      case 'land': this.spaceProgramService.landStatus = (val===this.landSelected)?'':val;
         break;
     }
   }
